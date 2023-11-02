@@ -5,6 +5,8 @@ C:\Users\driner tn\source\repos\App2\App2\bin\Debug\netstandard2.0\App2.pdb
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.csproj.AssemblyReference.cache
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\Cargando.xaml.g.cs
+C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\Inventarios.xaml.g.cs
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\Page2.xaml.g.cs
 C:\Users\driner tn\source\repos\App2\App2\obj\Debug\netstandard2.0\App2.AssemblyInfoInputs.cache

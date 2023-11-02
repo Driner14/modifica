@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1053341497119",
+    "project_id": "notifi-dffbc",
+    "storage_bucket": "notifi-dffbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053341497119:android:839296876a713b8778e22a",
+        "android_client_info": {
+          "package_name": "com.companyname.app2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdHI7PIhnMFaGm1o7bPP1FX58joL-3nW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

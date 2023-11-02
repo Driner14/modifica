@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Inventarios">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!-- Primera fila -->
+            <RowDefinition Height="*" />
+            <!-- Segunda fila -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <!-- Primera columna -->
+            <ColumnDefinition Width="*" />
+            <!-- Segunda columna -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Cuadro 1 con una imagen -->
+        <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="LightBlue">
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://mercadoacasa.com/wp-content/uploads/2020/07/Agua-Cielo625.png" Aspect="AspectFill" />
+                
+                <Label x:Name="paquete15" Text="0" HorizontalOptions="Center" TextColor="White" FontSize="24" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Cuadro 2 con una imagen -->
+        <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="LightGreen">
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://www.megofer.com/wp-content/uploads/2019/12/botella-de-san-mateo-600-ml-x-15-und.png" Aspect="AspectFill" />
+                <Label x:Name="paquete20" Text="0" HorizontalOptions="Center" TextColor="White" FontSize="24" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Cuadro 3 con una imagen -->
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="LightCoral">
+            <StackLayout VerticalOptions="Center">
+                <Image HeightRequest="250" Source="https://i.ibb.co/9VkTZWY/AGUA-FUENTE-AZUL-20-LT-con-Ca-o-removebg-preview.png" Aspect="AspectFill" />
+                <Label x:Name="Bidon" Text="0" HorizontalOptions="Center" TextColor="White" FontSize="24" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Más contenido si es necesario -->
+
+    </Grid>
+</ContentPage>

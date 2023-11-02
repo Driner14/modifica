@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Plugin.FirebasePushNotification;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace App2
 {
@@ -10,20 +9,28 @@ namespace App2
         {
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
+            // Token event
+            CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
+            {
+                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+            };
+            // Push message received event
+            CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
+            {
 
-             
-        }
+                System.Diagnostics.Debug.WriteLine("Received");
 
-        protected override void OnStart()
-        {
-        }
+            };
+            //Push message received event
+            CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
+            {
+                System.Diagnostics.Debug.WriteLine("Opened");
+                foreach (var data in p.Data)
+                {
+                    System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
+                }
 
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            };
         }
     }
 }

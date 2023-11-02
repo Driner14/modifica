@@ -2,118 +2,126 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App2.Page2">
 
-    
-    
-    <Grid>
+    <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <!-- Columnas de la cuadrícula -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="359" />
-            <!-- Columna para la cabecera -->
-            <ColumnDefinition Width="*" />
-            <!-- Columna para el contenido principal -->
-        </Grid.ColumnDefinitions>
-        <Image Source="imag.png" Aspect="AspectFill" Grid.RowSpan="3" Grid.ColumnSpan="2" Opacity="0.7" />
-
- 
-        
+        <Grid>
 
 
-
-        <!-- Cuadrados con botones y posibilidad de imagen -->
-        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="150" />
-                <RowDefinition Height="150" />
-                <RowDefinition Height="150" />
-                <RowDefinition Height="150" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
+            <!-- Columnas de la cuadrícula -->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="175" />
-                <ColumnDefinition Width="175" />    
-                
+                <ColumnDefinition Width="*" />
+                <!-- Columna para la cabecera -->
+                <ColumnDefinition Width="auto" />
+                <!-- Columna para el contenido principal -->
             </Grid.ColumnDefinitions>
 
-            <!-- Cuadrado 1 con botón y posible imagen -->
-            <Frame  Grid.Row="0" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#EBE7E7 " AutomationProperties.IsInAccessibleTree="False" >
-                <StackLayout  Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <!-- Imagen dentro del botón -->
+            <!-- Fondo -->
+            <Image Source="imagen1.jpeg" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="2" Opacity="0.7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
-                    <Label>Inventario</Label>
 
-                    <ImageButton HeightRequest="80" Source="https://cdn-icons-png.flaticon.com/512/2897/2897785.png" HorizontalOptions="Start" VerticalOptions="Fill" Margin="0,0,0,0"
+
+
+
+
+            <!-- Cuadrados con botones y posibilidad de imagen -->
+            <Grid Margin="0,0,0,0"   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <!-- Cuadrado 1 con botón y posible imagen -->
+                <Frame  Grid.Row="0" Grid.Column="0"  CornerRadius="15" HasShadow="True" Margin="10" AutomationProperties.IsInAccessibleTree="False" BackgroundColor="#66D6D2D2" >
+                    <StackLayout    Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                        <!-- Imagen dentro del botón -->
+
+                        <Label   FontSize="19">Inventarios</Label>
+
+                        <ImageButton x:Name="Inventario"  Clicked="ImageButton_Clicked_1" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/rxHf2Bx/inventario.png" HorizontalOptions="Start" VerticalOptions="Fill" Margin="0,0,0,0"
                                  
                                  />
-                </StackLayout>
-            </Frame>
+                    </StackLayout>
+                </Frame>
 
-            <!-- Cuadrado 2 con botón y posible imagen -->
-            <Frame Grid.Row="0" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen2.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
 
-            <!-- Cuadrado 3 con botón y posible imagen -->
-            <Frame Grid.Row="1" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen3.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
 
-            <!-- Cuadrado 4 con botón y posible imagen -->
-            <Frame Grid.Row="1" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen4.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
+                <!-- Cuadrado 3 con botón y posible imagen -->
+                <Frame Grid.Row="0" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#66D6D2D2">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <!-- Imagen dentro del botón -->
 
-            <!-- Cuadrado 5 con botón y posible imagen -->
-            <Frame Grid.Row="2" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen5.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
+                        <Label  FontSize="19">Compras</Label>
 
-            <!-- Cuadrado 6 con botón y posible imagen -->
-            <Frame Grid.Row="2" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen6.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
+                        <ImageButton Clicked="ImageButton_Clicked_2" BackgroundColor="Transparent"  WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/Mk4BjkD/lista-de-la-compra.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Margin="0,0,0,0"
+                                 
+                                 />
+                    </StackLayout>
+                </Frame>
 
-            <!-- Cuadrado 7 con botón y posible imagen -->
-            <Frame Grid.Row="3" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen7.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
+                <!-- Cuadrado 4 con botón y posible imagen -->
+                <Frame Grid.Row="1" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#66D6D2D2">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <!-- Imagen dentro del botón -->
+                        <Label  FontSize="18" Margin="0,0,0,0">Gastos extras</Label>
 
-            <!-- Cuadrado 8 con botón y posible imagen -->
-            <Frame Grid.Row="3" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10">
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Imagen dentro del botón -->
-                    <Button Image="imagen8.png" BackgroundColor="Transparent" />
-                </StackLayout>
-            </Frame>
+                        <ImageButton Clicked="ImageButton_Clicked_3" BackgroundColor="Transparent"   WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/R9mFjVq/gastos.png" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Cuadrado 5 con botón y posible imagen -->
+                <Frame Grid.Row="1" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#66D6D2D2">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <!-- Imagen dentro del botón -->
+                        <Label  FontSize="19">Empleados</Label>
+
+                        <ImageButton Clicked="ImageButton_Clicked_5" BackgroundColor="Transparent"   WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/YQjVGVr/empleados.png" HorizontalOptions="Start" VerticalOptions="Fill" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Cuadrado 6 con botón y posible imagen -->
+                <Frame Grid.Row="2" Grid.Column="0" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#66D6D2D2">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <!-- Imagen dentro del botón -->
+                        <Label  FontSize="19">reportes</Label>
+
+                        <ImageButton Clicked="ImageButton_Clicked_4" BackgroundColor="Transparent"  WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/VwXWKPN/analitica.png" HorizontalOptions="Start" VerticalOptions="Fill" Margin="0,0,0,0"/>
+
+                    </StackLayout>
+                </Frame>
+
+                <!-- Cuadrado 8 con botón y posible imagen -->
+                <Frame Grid.Row="2" Grid.Column="1" BorderColor="DarkGray" CornerRadius="15" HasShadow="True" Margin="10" BackgroundColor="#66D6D2D2">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <!-- Imagen dentro del botón -->
+                        <Label  FontSize="17" HorizontalOptions="CenterAndExpand">Notificaciones</Label>
+
+                        <ImageButton Clicked="ImageButton_Clicked_7" BackgroundColor="Transparent"  WidthRequest="90" HeightRequest="80" Source="https://i.ibb.co/6tYQx6z/nuevo-email.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Margin="0,0,0,0"/>
+
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Contenido principal de la página -->
+            <StackLayout Grid.Row="2">
+                <!-- Aquí puedes agregar el contenido principal de tu página -->
+            </StackLayout>
         </Grid>
+    </ScrollView>
 
-        <!-- Contenido principal de la página -->
-        <StackLayout Grid.Row="2">
-            <!-- Aquí puedes agregar el contenido principal de tu página -->
-        </StackLayout>
-    </Grid>
 </ContentPage>
